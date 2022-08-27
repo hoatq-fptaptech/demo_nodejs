@@ -39,9 +39,7 @@ app.get("/api-get-product",function (req,res) {
 });
 app.get("/api-product-by-category",function (req,res) {
     const categoryId = req.query.categoryId;
-    const sql_txt = "select product.id,product.name,product.price,category.name as " +
-        "category_name from product left join category on product.categoryId = " +
-        "category.id where categoryId = "+categoryId;
+    const sql_txt = "select * from product where  categoryId= "+categoryId;
     conn.query(sql_txt,function (err,data) {
         if(err) res.send("Error");
         else res.send(data);
