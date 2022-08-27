@@ -8,10 +8,10 @@ app.listen(port,function () {
 
 const mysql = require("mysql");
 const conn = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "root", // xampp: "", mamp: "root"
-    database: "T2204M",
+    host: "db4free.net",
+    user: "t2204m",
+    password: "t2204m123", // xampp: "", mamp: "root"
+    database: "t2204m_nodejs",
     port: 3306
 });
 
